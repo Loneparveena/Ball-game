@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "parveena_backend": {
+      "main": "src/parveena_backend/main.mo",
+      "type": "motoko"
+    },
+    "parveena_frontend": {
+      "dependencies": [
+        "parveena_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/parveena_frontend/src/index.html"
+      },
+      "source": [
+        "src/parveena_frontend/assets",
+        "dist/parveena_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
